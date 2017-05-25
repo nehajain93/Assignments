@@ -1,0 +1,19 @@
+<apex:page standardController="Contact" extensions="ContactPageController" title="Contact Edit" >
+    <apex:form >
+        <apex:pageBlock title="{!$Label.ContactPageTitle}" mode="edit" >
+        	<!-- Error messages -->
+        	<apex:pageMessages ></apex:pageMessages>
+            <apex:pageBlockSection title="{!$Label.ContactPageSectionTitle}" collapsible="false">
+                <!-- Fieldset "ContactFields" used for fields on layout, Also required property is utilized -->
+                <apex:repeat value="{!$ObjectType.Contact.FieldSets.ContactFields}" var="f" >
+                    <apex:inputField value="{!con[f.fieldPath]}" required="{!OR(f.required, f.dbrequired)}"/>
+                </apex:repeat>
+            </apex:pageBlockSection>
+            <!-- Save option will insert / update contact records, cancel will redirect to contact list view -->
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!save}"/>
+                <apex:commandButton value="Cancel" action="{!cancel}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

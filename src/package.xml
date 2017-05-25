@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>ContactListController</members>
+        <members>ContactListControllerTest</members>
+        <members>ContactPageController</members>
+        <members>ContactPageControllerTest</members>
+        <members>ContactSelector</members>
+        <members>ContactSetting</members>
+        <members>ContactTriggerHelper</members>
+        <members>ContactUtil</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>ContactList</members>
+        <members>ContactPage</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>ContactTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>ContactSetting__c</members>
+        <name>CustomObject</name>
+    </types>
+    <version>33.0</version>
+</Package>
